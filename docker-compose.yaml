@@ -4,6 +4,7 @@ services:
     networks:
       - proxy
     labels:
+      - "traefik.enable=true"
       - "traefik.http.routers.node-k.rule=Host(`node-k.at`)"
       - "traefik.http.routers.node-k.entrypoints=websecure"
       - "traefik.http.routers.node-k.tls=true"
