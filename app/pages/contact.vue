@@ -16,7 +16,7 @@ useSeoMeta({
       orientation="horizontal"
     >
       <NuxtImg
-        class="justify-self-end h-full"
+        class="justify-self-end h-full object-contain"
         src="/images/qr-discord.png"
         alt="QR-Code with the link to the node-K Discord Server"
       />
@@ -29,7 +29,7 @@ useSeoMeta({
       orientation="horizontal"
     >
       <NuxtImg
-        class="justify-self-end h-full"
+        class="justify-self-end h-full object-contain"
         src="/images/qr-signal.png"
         alt="QR-Code with the link to the node-K Signal Group"
       />
