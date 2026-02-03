@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@source "../../../content/**/*";
+
+@theme static {
+  --color-tropical-teal-50: oklch(98.03% 0.024 196.77);
+  --color-tropical-teal-100: oklch(96.12% 0.048 194.78);
+  --color-tropical-teal-200: oklch(92.92% 0.090 193.99);
+  --color-tropical-teal-300: oklch(90.48% 0.122 193.93);
+  --color-tropical-teal-400: oklch(88.77% 0.142 193.23);
+  --color-tropical-teal-500: oklch(87.74% 0.150 192.66);
+  --color-tropical-teal-600: oklch(74.21% 0.126 192.82);
+  --color-tropical-teal-700: oklch(60.02% 0.102 193.07);
+  --color-tropical-teal-800: oklch(44.90% 0.076 192.32);
+  --color-tropical-teal-900: oklch(28.38% 0.047 192.60);
+  --color-tropical-teal-950: oklch(22.86% 0.038 194.82);
+}
+
+@theme {
+  --font-sans: 'Public Sans', sans-serif;
+
+  --font-stylized: 'Tektur', sans-serif;
+}
+
+@layer theme {
+  h1, h2 {
+    @apply font-stylized;
+  }
+}
