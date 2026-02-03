@@ -1,0 +1,14 @@
+services:
+  node-k:
+    build: .
+    networks:
+      - proxy
+    labels:
+      - "traefik.http.routers.node-k.rule=Host(`node-k.at`)"
+      - "traefik.http.routers.node-k.entrypoints=websecure"
+      - "traefik.http.routers.node-k.tls=true"
+      - "traefik.http.routers.node-k.tls.certresolver=leresolver"
+
+networks:
+  proxy:
+    name: proxy

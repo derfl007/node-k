@@ -1,0 +1,5 @@
+services:
+  node-k:
+    build: .
+    ports:
+      - 13000:80
