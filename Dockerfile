@@ -14,6 +14,9 @@ RUN pnpm i
 # Copy the entire project
 COPY . ./
 
+ENV STUDIO_GITHUB_CLIENT_ID=
+ENV STUDIO_GITHUB_CLIENT_SECRET=
+
 # Build the project
 RUN pnpm run build
 
@@ -28,8 +31,6 @@ COPY --from=build /app/.output/ ./
 # Change the port and host
 ENV PORT=80
 ENV HOST=0.0.0.0
-ENV STUDIO_GITHUB_CLIENT_ID=
-ENV STUDIO_GITHUB_CLIENT_SECRET=
 
 EXPOSE 80
 
