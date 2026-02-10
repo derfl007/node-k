@@ -1,5 +1,8 @@
 services:
   node-k:
     build: .
+    environment:
+      - STUDIO_GITHUB_CLIENT_ID=
+      - STUDIO_GITHUB_CLIENT_SECRET=
     ports:
       - 13000:80

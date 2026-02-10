@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 
-@source "../../../content/**/*";
+@source "../../../content/**/*.md";
 
 @theme static {
   --color-tropical-teal-50: oklch(97.40% 0.016 196.90);

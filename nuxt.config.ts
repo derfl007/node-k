@@ -29,16 +29,7 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: {
-      routes: ['/'],
-      crawlLinks: true
-    }
-  },
-
-  hooks: {
-    'components:extend': (components) => {
-      const globals = components.filter(c => c.pascalName.startsWith('U'))
-
-      globals.forEach(c => c.global = true)
+      routes: ['/', '/about', '/meetings']
     }
   },
 
