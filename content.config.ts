@@ -2,6 +2,13 @@ import { defineCollection, defineContentConfig, z } from '@nuxt/content'
 
 export default defineContentConfig({
   collections: {
+    pages: defineCollection({
+      type: 'page',
+      source: {
+        include: 'pages/*.md',
+        prefix: '/'
+      }
+    }),
     meetings: defineCollection({
       type: 'data',
       source: 'meetings/*.md',

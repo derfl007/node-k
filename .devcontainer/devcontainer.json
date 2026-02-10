@@ -12,6 +12,9 @@
 	"forwardPorts": [
 		3000
 	],
+	"runArgs": [
+		"-p=3000:3000"
+	],
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "pnpm install",
 	"customizations": {

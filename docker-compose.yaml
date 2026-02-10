@@ -5,10 +5,14 @@ services:
       - proxy
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.node-k.rule=Host(`node-k.at`)"
+      - "traefik.http.routers.node-k.rule=Host(`node-k.at`) || Host(`www.node-k.at`)"
       - "traefik.http.routers.node-k.entrypoints=websecure"
       - "traefik.http.routers.node-k.tls=true"
       - "traefik.http.routers.node-k.tls.certresolver=leresolver"
+      - "traefik.http.routers.node-k.middlewares=www-redirect"
+      - "traefik.http.middlewares.www-redirect.redirectregex.regex=^https?://www.node-k.at/(.*)"
+      - "traefik.http.middlewares.www-redirect.redirectregex.replacement=https://node-k.at/$${1}"
+      - "traefik.http.middlewares.www-redirect.redirectregex.permanent=true"
 
 networks:
   proxy:

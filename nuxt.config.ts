@@ -1,5 +1,3 @@
-import svgLoader from 'vite-svg-loader'
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
@@ -7,9 +5,8 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/ui',
     '@nuxt/content',
-    '@nuxt/a11y',
-    '@nuxt/hints',
-    '@nuxt/scripts'
+    '@nuxt/scripts',
+    'nuxt-studio'
   ],
 
   devtools: {
@@ -32,12 +29,17 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: {
-      routes: ['/']
+      routes: ['/'],
+      crawlLinks: true
     }
   },
 
-  vite: {
-    plugins: [svgLoader()]
+  hooks: {
+    'components:extend': (components) => {
+      const globals = components.filter(c => c.pascalName.startsWith('U'))
+
+      globals.forEach(c => c.global = true)
+    }
   },
 
   eslint: {
@@ -46,6 +48,15 @@ export default defineNuxtConfig({
         commaDangle: 'never',
         braceStyle: '1tbs'
       }
+    }
+  },
+
+  studio: {
+    repository: {
+      provider: 'github',
+      owner: 'derfl007',
+      repo: 'node-k',
+      branch: 'master'
     }
   }
 })
