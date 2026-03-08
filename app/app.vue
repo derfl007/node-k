@@ -9,7 +9,10 @@ useHead({
     { key: 'theme-color', name: 'theme-color', content: color }
   ],
   link: [
-    { rel: 'icon', href: '/favicon.ico' }
+    { rel: 'icon', href: '/favicon.ico' },
+    { rel: 'alternate', href: '/blog/rss.xml', type: 'application/rss+xml', title: 'node-K RSS Feed' },
+    { rel: 'alternate', href: '/blog/atom.xml', type: 'application/atom+xml', title: 'node-K Atom Feed' },
+    { rel: 'alternate', href: '/blog/feed.json', type: 'application/feed+json', title: 'node-K JSON Feed' }
   ],
   htmlAttrs: {
     lang: 'en'

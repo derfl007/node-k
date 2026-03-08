@@ -27,20 +27,8 @@ useSeoMeta(page.value
 </script>
 
 <template>
-  <UContainer>
-    <UPage v-if="page">
-      <UPageHeader v-bind="page" />
-      <UPageBody>
-        <ContentRenderer
-          :value="page"
-        />
-      </UPageBody>
-    </UPage>
-    <UAlert
-      v-else
-      variant="outline"
-      title="404"
-      description="Page not found"
-    />
-  </UContainer>
+  <ContentRenderer
+    v-if="page"
+    :value="page"
+  />
 </template>

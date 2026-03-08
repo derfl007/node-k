@@ -5,8 +5,8 @@ const items = computed(() => [
     to: '/'
   },
   {
-    label: 'Meetings',
-    to: '/meetings'
+    label: 'Blog',
+    to: '/blog'
   },
   {
     label: 'Contact',
