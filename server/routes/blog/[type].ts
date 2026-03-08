@@ -1,5 +1,6 @@
 import dayjs from 'dayjs'
 import { Feed } from 'feed'
+import { queryCollection } from '@nuxt/content/server'
 
 export default defineEventHandler(async (event) => {
   const type = getRouterParam(event, 'type')
