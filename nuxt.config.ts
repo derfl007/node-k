@@ -30,6 +30,9 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true
+    },
+    routeRules: {
+      '/blog/**': { prerender: true },
     }
   },
 
