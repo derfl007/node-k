@@ -27,8 +27,11 @@ export default defineEventHandler(async (event) => {
     feed.addItem({
       title: post.title,
       description: post.description,
+      category: [{
+        name: post.badge.label
+      }],
       id: post.id,
-      link: `https://node-k.at/${post.id}`,
+      link: `https://node-k.at${post.path}`,
       date: dayjs(post.date).toDate()
     })
   })
