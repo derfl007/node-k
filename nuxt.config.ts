@@ -1,4 +1,3 @@
-//https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
@@ -32,7 +31,7 @@ export default defineNuxtConfig({
       crawlLinks: true
     },
     routeRules: {
-      '/blog/**': { prerender: true },
+      '/blog/**': { prerender: true }
     }
   },
 
