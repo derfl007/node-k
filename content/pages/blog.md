@@ -12,15 +12,15 @@ color: primary
 icon: "i-simple-icons-rss"
 links:
   - label: RSS
-    to: /blog/rss.xml
+    to: /feed/rss.xml
     size: md
     variant: outline
   - label: Atom
-    to: /blog/atom.xml
+    to: /feed/atom.xml
     size: md
     variant: outline
   - label: JSON
-    to: /blog/feed.json
+    to: /feed/feed.json
     size: md
     variant: outline
 ---

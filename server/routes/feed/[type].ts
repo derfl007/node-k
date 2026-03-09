@@ -18,9 +18,9 @@ export default defineEventHandler(async (event) => {
     copyright: '© node-K Hackerspace',
     updated: dayjs(posts[0]?.date).toDate(),
     feedLinks: {
-      rss: 'https://node-k.at/blog/rss.xml',
-      json: 'https://node-k.at/blog/feed.json',
-      atom: 'https://node-k.at/blog/atom.xml'
+      rss: 'https://node-k.at/feed/rss.xml',
+      json: 'https://node-k.at/feed/feed.json',
+      atom: 'https://node-k.at/feed/atom.xml'
     }
   })
 
